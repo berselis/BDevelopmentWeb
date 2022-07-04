@@ -47,7 +47,7 @@ header > nav{
 nav > ul > li{
     list-style: none;
     display: inline-block;
-    padding-right: 4vw;
+    margin-right: 2.5vw;
 }
 
 nav > ul > li > a{
@@ -55,13 +55,18 @@ nav > ul > li > a{
     color: #ffffff;
     font-weight: bold;
     font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
     transition: .3s ease;
+    padding: 5px 10px;
 }
 nav > ul > li > a:hover{
     color: var(--base-color);
     transition: all .3s ease;
 }
-
 nav > .banner-logo{
     max-width: 30vw;
 }
@@ -205,23 +210,93 @@ nav > .banner-logo > img{
 
 }
 
-
 main > section{
     width: 100%;
     height: auto;
     padding: 2vw;;
 }
-#about{
-    background: linear-gradient(#dcdcdcd7, #f6f6f6a5);
-    
+#about, #experience, #contact{
+    background: linear-gradient(#dcdcdcd7, #f6f6f6a5);  
 }
+
+#about > .section-header > .banner > .tittle{
+    display: flex;
+}
+
+#about > .section-header > .banner{
+    width: 100%;
+    height: 8vw;
+}
+
+
+
+.picture-about{
+    list-style: none;
+    display: flex;
+    position:relative;
+}
+
+
+.picture-about > li > img{
+   width: 8vw;
+   height: 8vw;
+   border-radius:50%;
+}
+
 
 .about-descriptive{
-    margin-top: 2vw;;
+    margin-top: 0.2vw;;
     font-size: 2.5vw;
-
 }
 
+#skills, #portafolio{
+    background:linear-gradient(352deg,#030703bf, #343434);
+    color:#ffffff;
+}
 
+#skills > .section-header{
+    display: flex;
+ }
 
+ #skills{
+    min-height: 40vw;
+    width: 100%;
+ }
 
+#skills > .section-header > .circle-style{
+   position: relative;
+}
+
+#skills > .section-header > .tittle{
+    z-index: 1;
+    margin-left: 4vw;
+    margin-top: 5vw;
+}
+#skills > .section-header > .tittle > .developer > p > .invert{
+    color: #000000;
+}
+
+#skills > .section-header > .circle-style > div{
+    border-radius: 50%;
+    position: absolute;
+}
+
+#skills > .section-header > .circle-style > .first-cicle{
+    width: 35vw;
+    height: 35vw;
+    background: linear-gradient(#dcdcdc, #f6f6f6);  
+    top: 3vw;
+    left: -12vw;
+}
+
+#skills > .section-header > .circle-style > .second-cicle{
+    width: 20vw;
+    height: 20vw;
+    background: linear-gradient(#201f1f, #3b3a3a);  
+    left: 10vw;
+    top: 20vw;
+}
+
+#section-content > .section-content{
+    
+}
