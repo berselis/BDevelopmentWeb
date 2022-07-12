@@ -81,6 +81,58 @@ nav > .banner-logo > img{
     cursor: pointer;
 }
 
+#CheckHamburg{
+    z-index: 2;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    opacity: 0;
+}
+
+#CheckHamburg:checked ~ .line-top{
+    transform: rotate(45deg);
+
+}
+#CheckHamburg:checked ~ .line-middle{
+    transform: translateX(16px);
+    opacity: 0;
+    
+}
+#CheckHamburg:checked ~ .line-bottom{
+    transform: rotate(-45deg);
+    
+}
+.hamburger{
+    position:relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.line{
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background-color: var(--base-color);
+    border-radius:5px;
+    transition:
+    transform .25s, opacity .35s;
+}
+
+.line-top{
+    transform: translateY(-7px);
+}
+.line-bottom{
+    transform:translateY(7px);
+}
+
+
+
+
+
+
 .special-chart{
     color: var(--base-color);
 }
@@ -314,7 +366,10 @@ main > section:nth-child(even){
     z-index: -1;
 }
 
-#skills > .section-content{
+#skills > .section-content,
+#experience > .section-content,
+#portfolio > .section-content,
+#contact > .section-content{
     padding-left: 32vw;
     padding-top: 3vw;
 }
@@ -391,4 +446,50 @@ main > section:nth-child(even){
     text-align: justify;
     margin-bottom: 2vw;;
     font-size: 2vw;
+ }
+
+
+ .card-logo > img{
+    width: 64px;
+ }
+
+ .card-list > .card{
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+ }
+ .card-list > .card > ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 5px 25px;
+ }
+
+ .card-list > .card > ul > li{
+    margin: 0 25px 0 0;
+ }
+
+
+ #contact > .section-content > form{
+    display: flex;
+    flex-direction: column;
+ }
+
+ #contact > .section-content > form > input{
+    margin-bottom: 2vw;
+    height: 5vw;
+    font-size: 3vw;
+    
+ }
+ #contact > .section-content > form > textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 20vw;
+    min-height: 20vw;
+    font-size: 3vw;
+ }
+
+ #contact > .section-content > form > button{
+    width: 25%;
+    margin-top: 2vw;;
  }
