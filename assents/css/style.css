@@ -8,7 +8,7 @@ html{
 }
 
 html::-webkit-scrollbar{
-    width: 1vw;;
+    width: 1vw;
 }
 
 html::-webkit-scrollbar-thumb{
@@ -29,13 +29,18 @@ html::-webkit-scrollbar-track{
 
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 header{
-    min-height: 50vh;
     width: 100%;
     background:linear-gradient(352deg,#030703bf, #343434);
     color: #ffffff;
     padding: 3vw;
-
+    position:sticky;
+    top:0;
+    z-index: 2;
 }
 
 header > nav{
@@ -212,10 +217,16 @@ nav > .banner-logo > img{
 
 main > section{
     width: 100%;
-    height: auto;
-    padding: 2vw;;
+    min-height: 100vw;
+    padding: 15vw 2vw;
 }
-#about, #experience, #contact{
+
+main > section:nth-child(odd){
+    background:linear-gradient(352deg,#030703bf, #343434);
+    color: #ffffff; 
+}
+
+main > section:nth-child(even){
     background: linear-gradient(#dcdcdcd7, #f6f6f6a5);  
 }
 
@@ -249,10 +260,6 @@ main > section{
     font-size: 2.5vw;
 }
 
-#skills, #portafolio{
-    background:linear-gradient(352deg,#030703bf, #343434);
-    color:#ffffff;
-}
 
 #skills > .section-header{
     display: flex;
